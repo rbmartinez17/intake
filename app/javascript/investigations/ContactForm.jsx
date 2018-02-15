@@ -189,17 +189,19 @@ class ContactForm extends React.Component {
               </div>
             </div>
             <div className='row'>
-              <div className='centered'>
-                <button className='btn btn-primary' type='submit'>Save</button>
-                { hasCancel &&
-                  <button
-                    className='btn btn-default'
-                    onClick={(event) => {
-                      event.preventDefault()
-                      onCancel()
-                    }}
-                  >Cancel</button>
-                }
+              <div className='col-md-12'>
+                <div className='pull-right'>
+                  { hasCancel &&
+                    <button
+                      className='btn btn-default'
+                      onClick={(event) => {
+                        event.preventDefault()
+                        onCancel()
+                      }}
+                    >Cancel</button>
+                  }
+                  <button className='btn btn-primary' type='submit'>Save</button>
+                </div>
               </div>
             </div>
           </form>
